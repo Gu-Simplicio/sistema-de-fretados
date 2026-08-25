@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chega Quando?</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div class="caixa">
+        <div class="logo-bus" aria-label="Logo do transporte">
+            <svg viewBox="0 0 90 90" aria-hidden="true">
+                <img src="onibus.png" style="width: 90%; height: 100%;" alt="Logo do transporte">
+            </svg>
+        </div>
+
+        <h1>Chega Quando?</h1>
+        <p class="subtitulo">Transporte fretado inteligente</p>
+
+        <div class="perfil-selecao" aria-label="Seleção de perfil">
+            <button type="button" class="perfil ativo">
+                <span>ESTUDANTE</span>
+            </button>
+            <button type="button" class="perfil">
+                <span>EMPRESA</span>
+            </button>
+            <button type="button" class="perfil">
+                <span class="icon" aria-hidden="true">
+                </span>
+                <span>MOTORISTA</span>
+            </button>
+        </div>
+
+        <div class="campo">
+            <label for="Usuario">Usuario</label>
+            <input type="text" id="Usuario" name="Usuario">
+        </div>
+
+        <div class="campo">
+            <label for="Senha">Senha</label>
+            <input type="password" id="Senha" name="Senha">
+        </div>
+        
+
+        <button type="button" class="botao-entrar" onclick="logar()">ENTRAR</button>
+
+        <p class="cadastro">
+            Não possui conta? <a href="cadastro.html">Cadastre-se aqui</a>
+        </p>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>
