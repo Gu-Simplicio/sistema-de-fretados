@@ -17,6 +17,29 @@ body {
     padding: 20px;
 }
 
+.navBar {
+    top: 0px;
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    background-color: #0b64c2;
+
+
+
+}
+
+.navbarTitulo {
+    margin: 0;
+    display: flex;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+
+
+
+
+}
+
 .caixa {
     width: 100%;
     max-width: 540px;
