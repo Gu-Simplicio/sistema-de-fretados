@@ -176,6 +176,35 @@ h1 {
     font-weight: 700;
 }
 
+.voltar {
+    display: block;
+    text-align: left;
+}
+
+.cadastro-motorista h1 {
+    font-size: 1.8rem;
+}
+
+.icone-cadastro {
+    width: 48px;
+    height: 48px;
+
+    margin: 8px auto 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background-color: #e8f1ff;
+
+    font-size: 24px;
+}
+
+.cadastro-motorista h1 {
+    font-size: 1.8rem;
+}
+
 @media (max-width: 560px) {
     .caixa {
         padding: 24px 18px 18px;
