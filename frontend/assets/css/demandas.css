@@ -1,3 +1,4 @@
+/* dados sobre ocupação de rotas */
 .ocupacao { margin: 1rem 0;  }
 
 .dadosOcupacao{ 
@@ -22,3 +23,39 @@
 .barraOcupacao div { height: 100%; background-color: var(--bg-barra); }
 
 .ocupacao p { font-size: .95rem; font-weight: 700; color: gray }
+
+/* grido com dados sobre rotas */
+.grid-dados {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.grid-dados button { box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08); }
+
+/* campo de rotas solicitadas */
+.rotaSolicitada {
+    width: 100%;
+    display: flex;
+    margin: 15px auto;
+    padding: 15px 45px;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(198, 198, 198, 0.25);
+}
+.rotaSolicitada .dadosSolicitacao h4 {
+    font-weight: 600;
+    font-size: 1.15rem;
+}
+.rotaSolicitada .dadosSolicitacao h5 {
+    font-weight: 500;
+    font-size: 1.rem;
+}
+
+.rotaSolicitada .qntdSolicitacoes { text-align: end; }
+.rotaSolicitada .qntdSolicitacoes span {
+    color: #00aaff;
+    font-weight: bolder;
+}
+.rotaSolicitada .qntdSolicitacoes p { font-weight: lighter; }
