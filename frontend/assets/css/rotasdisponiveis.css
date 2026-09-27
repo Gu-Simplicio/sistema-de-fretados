@@ -1,0 +1,29 @@
+.campo-longo .topo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    justify-content: space-between;
+}
+
+.campo-longo .topo span.disponivel { --bg-span: #029302; }
+.campo-longo .topo span.limitada { --bg-span: #ce8602; }
+.campo-longo .topo span.lotado { --bg-span: red; }
+.campo-longo .topo span { 
+    color: #fff;
+    padding: 2.5px 10px;
+    border-radius: 15px;
+    background-color: var(--bg-span);
+}
+
+.campo-longo .centro .dados-rota {
+    padding-left: 15px;
+}
+.campo-longo .centro .dados-rota h4 { font-weight: 500; }
+.campo-longo .centro .dados-rota h5 { font-weight: 300; }
+
+.campo-longo .fundo {
+    width: 80%;
+    display: flex;
+    font-weight: lighter;
+    justify-content: space-between;
+}
