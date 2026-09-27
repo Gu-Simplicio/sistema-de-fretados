@@ -1,0 +1,40 @@
+.campo-longo { 
+    display: flex; 
+}
+
+.campo-longo .esquerda{ width: 10%; }
+
+.campo-longo .centro {
+    width: 80%;
+    text-align: start;
+    border-bottom: none;
+}
+
+.campo-longo .centro h2 { font-size: 1.25rem; }
+.campo-longo .centro h3 { font-size: 1rem; font-weight: 300; }
+
+.campo-longo .centro div {
+    gap: 15px;
+    display: flex; 
+    font-weight: 100;
+    margin-bottom: 10px;
+}
+
+.campo-longo .centro span.ativo { --color-span: #027802; --bg-span: #a2f8a2; }
+.campo-longo .centro span.manutencao { --color-span: #e29404; --bg-span: #ffd9a1; }
+
+.campo-longo .centro span { 
+    padding: 2px 5px;
+    border-radius: 5px; 
+    color: var(--color-span);
+    background-color: var(--bg-span);
+}
+
+.campo-longo .direita { width: 10%;}
+
+svg {
+    width: 25px;
+    height: 25px;
+}
+.campo-longo .direita .icone-editar svg { stroke: blue }
+.campo-longo .direita .icone-remover svg { stroke: red }
