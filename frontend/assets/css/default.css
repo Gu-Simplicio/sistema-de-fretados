@@ -112,6 +112,9 @@ a { text-decoration: none; }
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
 }
 
+.nav-title { display: flex; align-items: center; gap: 5px }
+.nav-title a { color: inherit }
+
 .nav-title h2 {
     font-size: 1.1rem;
     font-weight: 700;
