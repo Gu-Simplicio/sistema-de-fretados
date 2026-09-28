@@ -1,50 +1,32 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chega Quando?</title>
-    <link rel="stylesheet" href="/frontend/assets/css/estilo.css">
+    <title>EMPRESA</title>
+    <link rel="stylesheet" href="assets/css/default.css">
+    <link rel="stylesheet" href="assets/css/empresa.css">
 </head>
-<body>
-    <div class="caixa">
-        <div class="logo-bus" aria-label="Logo do transporte">
-                <img src="assets/img/onibus.png" width="90%" height="100%" alt="Logo do transporte">
+<body onload="checaSessao()">
+    <nav class="nav">
+        <div class="nav-title" style="display: block;">
+            <h2>Chega Quando?</h2> 
+            <h5 id="msgSaudacao"></h5> 
         </div>
+        <button class="Sair" onclick="sair()">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                <polyline points="16 17 21 12 16 7"></polyline>
+                <line x1="21" y1="12" x2="9" y2="12"></line>
+            </svg>
+        </button>
+    </nav>
 
-        <h1>Chega Quando?</h1>
-        <p class="subtitulo">Transporte fretado inteligente</p>
-
-        <div class="perfil-selecao" aria-label="Seleção de perfil">
-            <button type="button" class="perfil ativo">
-                <span>ESTUDANTE</span>
-            </button>
-            <button type="button" class="perfil">
-                <span>EMPRESA</span>
-            </button>
-            <button type="button" class="perfil">
-                <span class="icon" aria-hidden="true">
-                </span>
-                <span>MOTORISTA</span>
-            </button>
-        </div>
-
-        <div class="campo">
-            <label for="Usuario">Usuário</label>
-            <input type="text" id="Usuario" name="Usuario">
-        </div>
-
-        <div class="campo">
-            <label for="Senha">Senha</label>
-            <input type="password" id="Senha" name="Senha">
-        </div>
-
-        <button type="button" class="botao-entrar" onclick="logar()">ENTRAR</button>
-
-        <p class="cadastro">
-            Não possui uma conta? <a href="cadastro.html">Cadastre-se aqui</a>
-        </p>
-    </div>
+    <main class="container">
+        
+    </main>
 
     <script src="assets/js/login.js"></script>
+    <script src="assets/js/index.js"></script>
 </body>
+</html>

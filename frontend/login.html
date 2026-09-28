@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chega Quando?</title>
+    <link rel="stylesheet" href="/frontend/assets/css/estilo.css">
+</head>
+<body>
+    <div class="caixa">
+        <div class="logo-bus" aria-label="Logo do transporte">
+                <img src="assets/img/onibus.png" width="90%" height="100%" alt="Logo do transporte">
+        </div>
+
+        <h1>Chega Quando?</h1>
+        <p class="subtitulo">Transporte fretado inteligente</p>
+
+        <select id="selectPerfil" class="perfil-selecao perfil ativo" style="text-align: center;">
+            <option value="estudante">ESTUDANTE</option>
+            <option value="empresa">EMPRESA</option>
+            <option value="motorista">MOTORISTA</option>
+        </select>
+
+        <!--
+        <div class="perfil-selecao" aria-label="Seleção de perfil">
+            <button type="button" class="perfil ativo">
+                <span>ESTUDANTE</span>
+            </button>
+            <button type="button" class="perfil">
+                <span>EMPRESA</span>
+            </button>
+            <button type="button" class="perfil">
+                <span class="icon" aria-hidden="true">
+                </span>
+                <span>MOTORISTA</span>
+            </button>
+        </div>
+        -->
+
+        <div class="campo">
+            <label for="Usuario">Usuário</label>
+            <input type="text" id="Usuario" name="Usuario">
+        </div>
+
+        <div class="campo">
+            <label for="Senha">Senha</label>
+            <input type="password" id="Senha" name="Senha">
+        </div>
+
+        <button type="button" class="botao-entrar" onclick="logar()">ENTRAR</button>
+
+        <p class="cadastro">
+            Não possui uma conta? <a href="cadastro.html">Cadastre-se aqui</a>
+        </p>
+    </div>
+
+    <script src="assets/js/login.js"></script>
+</body>
