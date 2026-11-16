@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitar Nova Rota</title>
+    <link rel="stylesheet" href="assets/css/default.css"><link rel="stylesheet" href="assets/css/telas.css">
+</head>
+<body class="page-body">
+    <nav class="nav"><div class="nav-title"><a href="index.html">←</a><h2>Solicitar Nova Rota</h2></div></nav>
+    <main class="container">
+        <form class="form-card" id="solicitacao">
+            <p class="muted">Preencha o formulário para sugerir uma rota ainda não atendida.</p>
+            <div class="form-grid">
+                <div class="campo"><label for="origem">Ponto de origem</label><input id="origem" required placeholder="Ex.: Vila Nova"></div>
+                <div class="campo"><label for="destino">Destino</label><input id="destino" required placeholder="Ex.: Campus Principal"></div>
+                <div class="campo"><label for="horario">Horário de interesse</label><input id="horario" required type="time"></div>
+                <div class="campo"><label for="passageiros">Passageiros estimados</label><input id="passageiros" required type="number" min="1" placeholder="Quantidade"></div>
+                <div class="campo full"><label for="observacoes">Comentários adicionais</label><textarea id="observacoes" placeholder="Informe pontos de referência ou necessidades específicas"></textarea></div>
+            </div>
+            <div class="form-actions"><button class="btn-primary" type="submit">ENVIAR SOLICITAÇÃO</button><a class="btn-secondary" href="index.html">Cancelar</a></div>
+        </form>
+        <div class="summary-card"><strong>Importante:</strong> sua sugestão será analisada pela empresa conforme a demanda da região.</div>
+    </main>
+    <script src="assets/js/telas.js"></script><script>mostrarMensagem(document.querySelector("#solicitacao"), "Solicitação enviada para análise.");</script>
+</body>
+</html>

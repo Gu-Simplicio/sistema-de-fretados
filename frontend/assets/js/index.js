@@ -27,7 +27,7 @@ function montaPag() {
                 </div>
             </a>
 
-            <button class="card">
+            <a class="card" href="passageiros.html">
                 <div class="icon-box card-green">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                 </div>
@@ -35,7 +35,7 @@ function montaPag() {
                     <h3>124</h3>
                     <h5>Passageiros</h5>
                 </div>
-            </button>
+            </a>
 
             <button class="card">
                 <div class="icon-box card-purple">
@@ -59,7 +59,7 @@ function montaPag() {
         </div>
         <!-- Botões de Ação do Painel -->
         <div class="grid-actions">
-            <button class="card card-action">
+            <a class="card card-action" href="criarnovarota.html">
                 <div class="icon-box card-blue">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6h12v12"/></svg>
                 </div>
@@ -67,9 +67,9 @@ function montaPag() {
                     <h3>Gerenciar Rotas</h3>
                     <h5>Criar e editar rotas disponíveis</h5>
                 </div>
-            </button>
+            </a>
 
-            <button class="card card-action">
+            <a class="card card-action" href="passageiros.html">
                 <div class="icon-box card-green">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                 </div>
@@ -77,7 +77,7 @@ function montaPag() {
                     <h3>Passageiros</h3>
                     <h5>Visualizar lista e check-ins</h5>
                 </div>
-            </button>
+            </a>
 
             <a class="card card-action" href="demandas.html">
                 <div class="icon-box card-purple">
@@ -99,7 +99,7 @@ function montaPag() {
                 </div>
             </a>
 
-            <button class="card card-action">
+            <a class="card card-action" href="mensalidades.html">
                 <div class="icon-box card-red">
                     <span class="currency-symbol">$</span>
                 </div>
@@ -107,9 +107,9 @@ function montaPag() {
                     <h3>Mensalidades</h3>
                     <h5>Acompanhar status de pagamentos</h5>
                 </div>
-            </button>
+            </a>
 
-            <button class="card card-action">
+            <a class="card card-action" href="cadastromotorista.html">
                 <div class="icon-box card-blue ">
                     <span class="currency-symbol">@</span>
                 </div>
@@ -117,7 +117,7 @@ function montaPag() {
                     <h3>Cadastrar</h3>
                     <h5>Cadastrar novos motoristas</h5>
                 </div>
-            </button>
+            </a>
 
         </div>`;
     } else if(perfil == "estudante") {
@@ -141,7 +141,7 @@ function montaPag() {
                 </div>
             </a>
 
-            <button class="card">
+            <a class="card" href="rastreamento.html">
                 <div class="icon-box card-green">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                         <path d="M0 0h24v24H0z" fill="none" />
@@ -155,9 +155,9 @@ function montaPag() {
                     <h3>Rastreamento</h3>
                     <h5>Acompanhe em tempo real</h5>
                 </div>
-            </button>
+            </a>
 
-            <button class="card">
+            <a class="card" href="checkin.html">
                 <div class="icon-box card-purple">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                         <path d="M0 0h24v24H0z" fill="none" />
@@ -168,9 +168,9 @@ function montaPag() {
                     <h3>Check-in</h3>
                     <h5>Confirme seu embarque</h5>
                 </div>
-            </button>
+            </a>
 
-            <button class="card">
+            <a class="card" href="solicitarrota.html">
                 <div class="icon-box card-orange">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                         <path d="M0 0h24v24H0z" fill="none" />
@@ -184,9 +184,9 @@ function montaPag() {
                     <h3>Solicitar Rota</h3>
                     <h5>Peça uma nova rota</h5>
                 </div>
-            </button>
+            </a>
 
-            <button class="card">
+            <a class="card" href="avisos.html">
                 <div class="icon-box card-red">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                         <path d="M0 0h24v24H0z" fill="none" />
@@ -197,7 +197,7 @@ function montaPag() {
                     <h3>Avisos</h3>
                     <h5>Veja comunicados importantes</h5>
                 </div>
-            </button>
+            </a>
         </div>`;
     }
 
