@@ -1,6 +1,16 @@
 function logar(){
-    var nome = document.getElementById("Usuario").value;
-    alert("Bem vindo "+nome);
-    window.location.href = "Empresa.html";
-    window.name = nome;
+    const selectPerfil = document.querySelector("#selectPerfil");
+    let perfil = selectPerfil.value;
+
+    localStorage.setItem("usuario_resta", perfil)
+
+    alert("Bem vindo!");
+    window.location.href = "index.html";
+}
+
+function sair() {
+    if(confirm("Tem certeza que deseja sair?")) {
+        localStorage.clear();
+        window.location.href = "login.html";
+    }
 }

@@ -1,35 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Criar Nova Rota | Chega Quando</title>
-    <link rel="stylesheet" href="assets/css/estilo.css">
+    <link rel="stylesheet" href="assets/css/default.css">
+    <link rel="stylesheet" href="assets/css/telas.css">
 </head>
-<body>
-    <nav class="navBar">
-        <spam class="navBar"></spam>
-        <div class="navBar">
-            
-            <h3 class="navbarTitulo">Criar Rota</h3>
-        </div>
-
-        <div class="returnButton">
-            <button> 
-                <img src="assets/img/returnbutton.png" alt="Voltar" style="width: 30px; height: 30px; background: none; border: 0; outline: 0;"></img>
-            </button>
-
-
-        </div>
-        
-        <div class="navBar">
-            <button href="index.html" src="assets/img/exitbutton.png">
-
-            </button>
-
-
-        </div>
-    </nav>
-
+<body class="page-body">
+    <nav class="nav"><div class="nav-title"><a href="index.html">←</a><h2>Criar Nova Rota</h2></div></nav>
+    <main class="container">
+        <form class="form-card" id="rota-form">
+            <div class="form-grid">
+                <div class="campo full"><label for="nome-rota">Nome da rota</label><input id="nome-rota" required placeholder="Ex.: Centro - Campus Principal"></div>
+                <div class="campo"><label for="origem">Ponto de origem</label><input id="origem" required placeholder="Origem"></div>
+                <div class="campo"><label for="destino">Destino</label><input id="destino" required placeholder="Destino"></div>
+                <div class="campo"><label for="saida">Horário de saída</label><input id="saida" required type="time"></div>
+                <div class="campo"><label for="chegada">Horário de chegada</label><input id="chegada" required type="time"></div>
+                <div class="campo"><label for="valor">Valor mensal (R$)</label><input id="valor" required type="number" min="0" step="0.01" placeholder="180,00"></div>
+                <div class="campo"><label for="vagas">Total de vagas</label><input id="vagas" required type="number" min="1" placeholder="15"></div>
+                <div class="campo"><label for="veiculo">Veículo</label><select id="veiculo"><option>Mercedes Sprinter - ABC-1234</option><option>Volkswagen Volksbus - DEF-5678</option></select></div>
+                <div class="campo"><label for="dias">Dias de operação</label><select id="dias"><option>Segunda a sexta-feira</option><option>Todos os dias</option><option>Finais de semana</option></select></div>
+            </div>
+            <div class="form-actions"><button class="btn-primary" type="submit">CRIAR ROTA</button><a class="btn-secondary" href="index.html">Cancelar</a></div>
+        </form>
+    </main>
+    <script src="assets/js/telas.js"></script><script>mostrarMensagem(document.querySelector("#rota-form"), "Rota criada com sucesso.");</script>
 </body>
 </html>

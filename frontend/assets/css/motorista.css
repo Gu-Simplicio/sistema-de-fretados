@@ -1,0 +1,175 @@
+/* Estilos do painel Chega Quando? */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f6f8;
+    color: #1e293b;
+}
+
+.nav {
+    background-color: #1d72b8;
+    color: #ffffff;
+    padding: 12px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.Sair {
+    background: none;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 4px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 24px auto;
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.grid-metrics {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.grid-actions {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    text-align: left;
+    cursor: pointer;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 12px rgba(15, 23, 42, 0.12);
+}
+
+.icon-box {
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.card-blue {
+    background-color: #e8f1ff;
+    color: #2563eb;
+}
+
+.card-green {
+    background-color: #e6f9f0;
+    color: #10b981;
+}
+
+.card-purple {
+    background-color: #f3e8ff;
+    color: #a855f7;
+}
+
+.card-orange {
+    background-color: #ffedd5;
+    color: #f97316;
+}
+
+.card-red {
+    background-color: #ffe4e6;
+    color: #e11d48;
+}
+
+.info-metric {
+    display: flex;
+    align-items: baseline;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.nav-title {
+    display: block;
+}
+
+.nome-sistema {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.nav-title h1 {
+    font-size: 0.8rem;
+    font-weight: 400;
+    opacity: 0.85;
+}
+
+.info-metric dd {
+    order: -1;
+    color: #0f172a;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.info-metric dt,
+.info > span {
+    color: #64748b;
+    font-size: 0.8rem;
+}
+
+.info strong {
+    display: block;
+    color: #0f172a;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.info > span {
+    display: block;
+    margin-top: 2px;
+}
+
+.grid-metrics .card,
+button:disabled {
+    cursor: default;
+    opacity: 1;
+}
+
+
+/* Responsividade */
+@media (max-width: 900px) {
+    .grid-metrics {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .grid-metrics, .grid-actions {
+        grid-template-columns: 1fr;
+    }
+}

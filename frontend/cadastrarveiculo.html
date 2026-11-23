@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Veículo</title>
+    <link rel="stylesheet" href="assets/css/default.css"><link rel="stylesheet" href="assets/css/telas.css">
+</head>
+<body class="page-body">
+    <nav class="nav"><div class="nav-title"><a href="gerenciarVeiculos.html">←</a><h2>Cadastrar Veículo</h2></div></nav>
+    <main class="container">
+        <form class="form-card" id="veiculo">
+            <div class="form-grid">
+                <div class="campo"><label for="modelo">Modelo</label><input id="modelo" required placeholder="Ex.: Mercedes Sprinter"></div>
+                <div class="campo"><label for="placa">Placa</label><input id="placa" required placeholder="ABC-1234"></div>
+                <div class="campo"><label for="capacidade">Capacidade</label><input id="capacidade" required type="number" min="1" placeholder="Passageiros"></div>
+                <div class="campo"><label for="ano">Ano</label><input id="ano" required type="number" min="1900" max="2100"></div>
+                <div class="campo"><label for="vistoria">Validade da vistoria</label><input id="vistoria" type="date"></div>
+                <div class="campo"><label for="seguro">Validade do seguro</label><input id="seguro" type="date"></div>
+                <div class="campo full"><label for="motorista">Motorista vinculado</label><select id="motorista"><option>Marcelo João Silva</option><option>Sem motorista</option></select></div>
+            </div>
+            <div class="form-actions"><button class="btn-primary" type="submit">CADASTRAR VEÍCULO</button><a class="btn-secondary" href="gerenciarVeiculos.html">Cancelar</a></div>
+        </form>
+    </main>
+    <script src="assets/js/telas.js"></script><script>mostrarMensagem(document.querySelector("#veiculo"), "Veículo cadastrado com sucesso.");</script>
+</body>
+</html>

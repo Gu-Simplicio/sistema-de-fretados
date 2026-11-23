@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check-in de Embarque</title>
+    <link rel="stylesheet" href="assets/css/default.css"><link rel="stylesheet" href="assets/css/telas.css">
+</head>
+<body class="page-body">
+    <nav class="nav"><div class="nav-title"><a href="index.html">←</a><h2>Check-in de Embarque</h2></div></nav>
+    <main class="container">
+        <section class="summary-card"><h3>Sua viagem de hoje</h3><p><strong>Centro - Campus Principal</strong></p><p class="muted">Saída prevista: 07:00 · Praça Central</p></section>
+        <section class="summary-card center"><h3>QR Code de Embarque</h3><div class="qr-box" aria-label="QR Code ilustrativo">QR</div><p class="muted">Apresente este código ao motorista para confirmar seu embarque.</p><button class="btn-primary" id="confirmarCheckin" type="button">FAZER CHECK-IN</button></section>
+        <div class="summary-card"><p class="muted">O check-in deve ser feito até 5 minutos antes da saída para garantir sua vaga.</p></div>
+    </main>
+    <script>document.querySelector("#confirmarCheckin").addEventListener("click", function () { this.textContent = "CHECK-IN CONFIRMADO"; this.disabled = true; this.style.background = "#16803c"; alert("Embarque confirmado."); });</script>
+</body>
+</html>
