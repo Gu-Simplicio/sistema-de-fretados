@@ -12,6 +12,7 @@
         <section class="summary-card center"><h3>QR Code de Embarque</h3><div class="qr-box" aria-label="QR Code ilustrativo">QR</div><p class="muted">Apresente este código ao motorista para confirmar seu embarque.</p><button class="btn-primary" id="confirmarCheckin" type="button">FAZER CHECK-IN</button></section>
         <div class="summary-card"><p class="muted">O check-in deve ser feito até 5 minutos antes da saída para garantir sua vaga.</p></div>
     </main>
-    <script>document.querySelector("#confirmarCheckin").addEventListener("click", function () { this.textContent = "CHECK-IN CONFIRMADO"; this.disabled = true; this.style.background = "#16803c"; alert("Embarque confirmado."); });</script>
+    <script src="assets/js/modal.js"></script>
+    <script>document.querySelector("#confirmarCheckin").addEventListener("click", function () { this.textContent = "CHECK-IN CONFIRMADO"; this.disabled = true; this.style.background = "#16803c"; exibeModal("Embarque confirmado.", "sucesso"); });</script>
 </body>
 </html>

@@ -1,16 +1,41 @@
 function logar(){
     const selectPerfil = document.querySelector("#selectPerfil");
-    let perfil = selectPerfil.value;
+    const usuario = document.querySelector("#Usuario");
+    const senha = document.querySelector("#Senha");
 
-    localStorage.setItem("usuario_resta", perfil)
+    usuario.setCustomValidity("");
+    senha.setCustomValidity("");
 
-    alert("Bem vindo!");
-    window.location.href = "index.html";
+    if (!usuario.value.trim()) {
+        usuario.setCustomValidity("Informe o usuário.");
+        usuario.reportValidity();
+        exibeModal("Informe o usuário para entrar.", "erro");
+        usuario.focus();
+        return;
+    }
+
+    if (!senha.value.trim()) {
+        senha.setCustomValidity("Informe a senha.");
+        senha.reportValidity();
+        exibeModal("Informe a senha para entrar.", "erro");
+        senha.focus();
+        return;
+    }
+
+    const perfil = selectPerfil.value;
+    localStorage.setItem("usuario_resta", perfil);
+    exibeModal("Bem-vindo! Login realizado com sucesso.", "sucesso");
+
+    window.setTimeout(function () {
+        window.location.href = "index.html";
+    }, 900);
 }
 
 function sair() {
-    if(confirm("Tem certeza que deseja sair?")) {
-        localStorage.clear();
-        window.location.href = "login.html";
-    }
+    exibeModal("Tem certeza que deseja sair?", "confirm").then(function (confirmado) {
+        if (confirmado) {
+            localStorage.clear();
+            window.location.href = "login.html";
+        }
+    });
 }

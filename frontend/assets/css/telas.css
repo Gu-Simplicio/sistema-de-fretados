@@ -56,6 +56,7 @@
 .form-card input,
 .form-card select,
 .form-card textarea,
+.filter-row input,
 .filter-row select {
     width: 100%;
     min-height: 42px;
@@ -129,6 +130,19 @@
 .filter-row .campo {
     flex: 1;
     margin: 0;
+}
+
+.filter-row input,
+.filter-row select {
+    background-color: #fff;
+    transition: border-color .15s ease, box-shadow .15s ease;
+}
+
+.filter-row input:focus,
+.filter-row select:focus {
+    border-color: #1d72b8;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(29, 114, 184, .12);
 }
 
 .data-list {

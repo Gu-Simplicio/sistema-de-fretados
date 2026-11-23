@@ -22,10 +22,11 @@
             <div class="form-actions"><button class="btn-secondary" type="reset">Limpar</button><button class="btn-danger" type="submit">ENVIAR EMERGÊNCIA</button></div>
         </form>
     </main>
+    <script src="assets/js/modal.js"></script>
     <script>
         document.querySelector("#ticketEmergencia").addEventListener("submit", function (event) {
             event.preventDefault();
-            alert("Ticket enviado à empresa. A equipe foi avisada.");
+            exibeModal("Ticket enviado à empresa. A equipe foi avisada.", "sucesso");
             this.reset();
         });
     </script>

@@ -3,16 +3,20 @@ function voltarPagina() {
 }
 
 function confirmarRemocao(event) {
-    if (!window.confirm("Deseja remover este veículo?")) {
-        event.preventDefault();
-    }
-    return true;
+    event.preventDefault();
+    const destino = event.currentTarget.getAttribute("href");
+    exibeModal("Deseja remover este veículo?", "confirm").then(function (confirmado) {
+        if (confirmado) {
+            window.location.href = destino;
+        }
+    });
+    return false;
 }
 
 function mostrarMensagem(form, mensagem) {
     form.addEventListener("submit", function (event) {
         event.preventDefault();
-        alert(mensagem);
+        exibeModal(mensagem, "sucesso");
         form.reset();
     });
 }

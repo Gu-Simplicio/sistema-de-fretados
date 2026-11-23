@@ -21,22 +21,31 @@
             <option value="motorista">MOTORISTA</option>
         </select>
 
-        <div class="campo">
-            <label for="Usuario">Usuário</label>
-            <input type="text" id="Usuario" name="Usuario">
-        </div>
+        <form id="formLogin" novalidate>
+            <div class="campo">
+                <label for="Usuario">Usuário</label>
+                <input type="text" id="Usuario" name="Usuario" required autocomplete="username">
+            </div>
 
-        <div class="campo">
-            <label for="Senha">Senha</label>
-            <input type="password" id="Senha" name="Senha">
-        </div>
+            <div class="campo">
+                <label for="Senha">Senha</label>
+                <input type="password" id="Senha" name="Senha" required autocomplete="current-password">
+            </div>
 
-        <button type="button" class="botao-entrar" onclick="logar()">ENTRAR</button>
+            <button type="submit" class="botao-entrar">ENTRAR</button>
+        </form>
 
         <p class="cadastro">
             Não possui uma conta? <a href="cadastro.html">Cadastre-se aqui</a>
         </p>
     </div>
 
+    <script src="assets/js/modal.js"></script>
     <script src="assets/js/login.js"></script>
+    <script>
+        document.querySelector("#formLogin").addEventListener("submit", function (event) {
+            event.preventDefault();
+            logar();
+        });
+    </script>
 </body>
