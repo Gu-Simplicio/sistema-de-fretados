@@ -199,6 +199,39 @@ function montaPag() {
                 </div>
             </a>
         </div>`;
+    } else if(perfil == "motorista") {
+        msgSaudacao.textContent = "Painel do Motorista";
+
+        pagina = `<section class="grid-metrics" aria-label="Resumo da rota atual">
+            <div class="card">
+                <span class="icon-box card-blue" aria-hidden="true">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+                </span>
+                <dl class="info-metric">
+                    <dt>Saída prevista</dt>
+                    <dd><time datetime="07:00">07:00</time></dd>
+                </dl>
+            </div>
+            <div class="card">
+                <span class="icon-box card-green" aria-hidden="true">✓</span>
+                <dl class="info-metric"><dt>Alunos previstos</dt><dd>5</dd></dl>
+            </div>
+            <div class="card">
+                <span class="icon-box card-purple" aria-hidden="true">⌖</span>
+                <dl class="info-metric"><dt>Paradas na rota</dt><dd>4</dd></dl>
+            </div>
+            <div class="card">
+                <span class="icon-box card-orange" aria-hidden="true">⚑</span>
+                <dl class="info-metric"><dt>Chegada prevista</dt><dd><time datetime="07:45">07:45</time></dd></dl>
+            </div>
+        </section>
+        <section class="grid-actions" aria-label="Menu do motorista">
+            <button type="button" class="card card-action" disabled><span class="icon-box card-blue" aria-hidden="true">↝</span><span class="info"><strong>Rota atual</strong><span>Centro – Campus Principal</span></span></button>
+            <button type="button" class="card card-action" disabled><span class="icon-box card-green" aria-hidden="true">✓</span><span class="info"><strong>Chamada</strong><span>Conferir quais alunos embarcaram</span></span></button>
+            <button type="button" class="card card-action" disabled><span class="icon-box card-purple" aria-hidden="true">☏</span><span class="info"><strong>Chat com motoristas</strong><span>Trocar informações com outros motoristas</span></span></button>
+            <button type="button" class="card card-action" disabled><span class="icon-box card-orange" aria-hidden="true">☏</span><span class="info"><strong>Chat da rota atual</strong><span>Conversar com os alunos desta viagem</span></span></button>
+            <button type="button" class="card card-action" disabled><span class="icon-box card-red" aria-hidden="true">!</span><span class="info"><strong>Ticket de emergência</strong><span>Comunicar uma emergência à empresa</span></span></button>
+        </section>`;
     }
 
     container.innerHTML = pagina;
