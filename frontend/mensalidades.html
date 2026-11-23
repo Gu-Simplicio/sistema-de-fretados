@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Mensalidades</title>
+    <link rel="stylesheet" href="assets/css/default.css"><link rel="stylesheet" href="assets/css/telas.css">
+</head>
+<body class="page-body">
+    <nav class="nav"><div class="nav-title"><a href="index.html">←</a><h2>Controle de Mensalidades</h2></div></nav>
+    <main class="container">
+        <div class="stats-grid"><div class="stat"><strong>2</strong><span>Pagos</span></div><div class="stat"><strong>2</strong><span>Pendentes</span></div><div class="stat"><strong>1</strong><span>Atrasado</span></div><div class="stat"><strong>R$ 900,00</strong><span>Receita prevista</span></div></div>
+        <div class="filter-row"><div class="campo"><label for="busca">Pesquisar</label><input id="busca" data-filter-target=".mensalidade" type="search" placeholder="Nome do estudante"></div><div class="campo"><label for="status">Status</label><select id="status"><option>Todos</option><option>Pago</option><option>Pendente</option><option>Atrasado</option></select></div></div>
+        <section class="data-list">
+            <article class="data-row mensalidade"><div><h4>Ana Silva</h4><p>Centro - Campus Principal · Vencimento: 25/05/2026 · R$ 180,00</p></div><span class="badge green">Pago</span></article>
+            <article class="data-row mensalidade"><div><h4>Carlos Santos</h4><p>Centro - Campus Principal · Vencimento: 25/05/2026 · R$ 180,00</p></div><span class="badge orange">Pendente</span></article>
+            <article class="data-row mensalidade"><div><h4>Maria Oliveira</h4><p>Centro - Campus Principal · Vencimento: 20/05/2026 · R$ 180,00</p></div><span class="badge red">Atrasado</span></article>
+            <article class="data-row mensalidade"><div><h4>João Costa</h4><p>Bairro Norte - Campus Tecnológico · Vencimento: 25/05/2026 · R$ 180,00</p></div><span class="badge green">Pago</span></article>
+        </section>
+    </main>
+    <script src="assets/js/telas.js"></script>
+</body>
+</html>

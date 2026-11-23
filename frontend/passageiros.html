@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passageiros e Check-ins</title>
+    <link rel="stylesheet" href="assets/css/default.css">
+    <link rel="stylesheet" href="assets/css/telas.css">
+</head>
+<body class="page-body">
+    <nav class="nav"><div class="nav-title"><a href="index.html">←</a><h2>Passageiros e Check-ins</h2></div></nav>
+    <main class="container">
+        <div class="filter-row">
+            <div class="campo"><label for="busca">Pesquisar passageiro</label><input id="busca" data-filter-target=".passageiro" type="search" placeholder="Nome ou rota"></div>
+            <div class="campo"><label for="rota">Rota</label><select id="rota"><option>Todas as rotas</option><option>Centro - Campus Principal</option><option>Bairro Norte - Campus Tecnológico</option></select></div>
+        </div>
+        <div class="stats-grid">
+            <div class="stat"><strong>5</strong><span>Check-ins confirmados</span></div>
+            <div class="stat"><strong>4</strong><span>Pendentes</span></div>
+            <div class="stat"><strong>1</strong><span>Ausentes</span></div>
+            <div class="stat"><strong>9</strong><span>Total de passageiros</span></div>
+        </div>
+        <section class="data-list">
+            <article class="data-row passageiro"><div><h4>Ana Silva</h4><p>Centro - Campus Principal · 07:00</p></div><span class="badge green">Check-in</span></article>
+            <article class="data-row passageiro"><div><h4>Carlos Santos</h4><p>Centro - Campus Principal · 07:00</p></div><span class="badge green">Check-in</span></article>
+            <article class="data-row passageiro"><div><h4>Maria Oliveira</h4><p>Centro - Campus Principal · 07:00</p></div><span class="badge red">Ausente</span></article>
+            <article class="data-row passageiro"><div><h4>João Costa</h4><p>Bairro Norte - Campus Tecnológico · 07:00</p></div><span class="badge orange">Pendente</span></article>
+            <article class="data-row passageiro"><div><h4>Paula Pereira</h4><p>Bairro Norte - Campus Tecnológico · 07:00</p></div><span class="badge green">Check-in</span></article>
+        </section>
+    </main>
+    <script src="assets/js/telas.js"></script>
+</body>
+</html>
