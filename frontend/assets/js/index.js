@@ -226,11 +226,11 @@ function montaPag() {
             </div>
         </section>
         <section class="grid-actions" aria-label="Menu do motorista">
-            <button type="button" class="card card-action" disabled><span class="icon-box card-blue" aria-hidden="true">↝</span><span class="info"><strong>Rota atual</strong><span>Centro – Campus Principal</span></span></button>
-            <button type="button" class="card card-action" disabled><span class="icon-box card-green" aria-hidden="true">✓</span><span class="info"><strong>Chamada</strong><span>Conferir quais alunos embarcaram</span></span></button>
-            <button type="button" class="card card-action" disabled><span class="icon-box card-purple" aria-hidden="true">☏</span><span class="info"><strong>Chat com motoristas</strong><span>Trocar informações com outros motoristas</span></span></button>
-            <button type="button" class="card card-action" disabled><span class="icon-box card-orange" aria-hidden="true">☏</span><span class="info"><strong>Chat da rota atual</strong><span>Conversar com os alunos desta viagem</span></span></button>
-            <button type="button" class="card card-action" disabled><span class="icon-box card-red" aria-hidden="true">!</span><span class="info"><strong>Ticket de emergência</strong><span>Comunicar uma emergência à empresa</span></span></button>
+            <a class="card card-action" href="rastreamento.html"><span class="icon-box card-blue" aria-hidden="true">↝</span><span class="info"><strong>Rota atual</strong><span>Centro – Campus Principal</span></span></a>
+            <a class="card card-action" href="chamada.html"><span class="icon-box card-green" aria-hidden="true">✓</span><span class="info"><strong>Chamada</strong><span>Conferir quais alunos embarcaram</span></span></a>
+            <a class="card card-action" href="chatmotoristas.html"><span class="icon-box card-purple" aria-hidden="true">☏</span><span class="info"><strong>Chat com motoristas</strong><span>Trocar informações com outros motoristas</span></span></a>
+            <a class="card card-action" href="chatrota.html"><span class="icon-box card-orange" aria-hidden="true">☏</span><span class="info"><strong>Chat da rota atual</strong><span>Conversar com os alunos desta viagem</span></span></a>
+            <a class="card card-action" href="emergencia.html"><span class="icon-box card-red" aria-hidden="true">!</span><span class="info"><strong>Ticket de emergência</strong><span>Comunicar uma emergência à empresa</span></span></a>
         </section>`;
     }
 

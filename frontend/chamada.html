@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamada</title>
+    <link rel="stylesheet" href="assets/css/default.css">
+    <link rel="stylesheet" href="assets/css/telas.css">
+</head>
+<body class="page-body">
+    <nav class="nav"><div class="nav-title"><a href="index.html" aria-label="Voltar">←</a><h2>Chamada</h2></div></nav>
+    <main class="container">
+        <section class="summary-card">
+            <div class="data-row"><div><h3>Centro - Campus Principal</h3><p class="muted">Saída às 07:00 · 5 passageiros previstos</p></div><span class="badge blue" id="chamadaContador">0 / 5</span></div>
+        </section>
+        <section class="summary-card">
+            <h3>Alunos da rota</h3>
+            <div class="data-list" id="listaChamada">
+                <label class="passenger-row"><span><strong>Ana Souza</strong><small class="muted">Praça Central</small></span><input type="checkbox" aria-label="Confirmar Ana Souza"></label>
+                <label class="passenger-row"><span><strong>Bruno Lima</strong><small class="muted">Avenida Principal</small></span><input type="checkbox" aria-label="Confirmar Bruno Lima"></label>
+                <label class="passenger-row"><span><strong>Carla Dias</strong><small class="muted">Avenida Principal</small></span><input type="checkbox" aria-label="Confirmar Carla Dias"></label>
+                <label class="passenger-row"><span><strong>Daniel Rocha</strong><small class="muted">Shopping Center</small></span><input type="checkbox" aria-label="Confirmar Daniel Rocha"></label>
+                <label class="passenger-row"><span><strong>Julia Martins</strong><small class="muted">Shopping Center</small></span><input type="checkbox" aria-label="Confirmar Julia Martins"></label>
+            </div>
+            <div class="form-actions"><button class="btn-primary" id="finalizarChamada" type="button">FINALIZAR CHAMADA</button></div>
+        </section>
+    </main>
+    <script>
+        const checks = document.querySelectorAll("#listaChamada input");
+        const contador = document.querySelector("#chamadaContador");
+        function atualizar() { const total = [...checks].filter(input => input.checked).length; contador.textContent = total + " / " + checks.length; }
+        checks.forEach(input => input.addEventListener("change", atualizar));
+        document.querySelector("#finalizarChamada").addEventListener("click", function () {
+            this.textContent = "CHAMADA FINALIZADA";
+            this.disabled = true;
+            this.style.background = "#16803c";
+        });
+    </script>
+</body>
+</html>

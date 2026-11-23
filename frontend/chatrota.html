@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat da Rota Atual</title>
+    <link rel="stylesheet" href="assets/css/default.css">
+    <link rel="stylesheet" href="assets/css/telas.css">
+</head>
+<body class="page-body">
+    <nav class="nav"><div class="nav-title"><a href="index.html" aria-label="Voltar">←</a><h2>Chat da Rota Atual</h2></div></nav>
+    <main class="container">
+        <section class="summary-card">
+            <div class="data-row"><div><strong>Centro - Campus Principal</strong><p class="muted">Rota ativa · 5 passageiros</p></div><span class="badge green">Em andamento</span></div>
+        </section>
+        <section class="chat-card">
+            <header class="chat-header"><span class="chat-avatar card-orange">R</span><div><strong>Grupo da viagem</strong><small>Motorista e passageiros</small></div></header>
+            <div class="chat-messages" id="mensagensRota">
+                <div class="message received"><strong>Ana</strong><p>Já saí de casa e estou chegando à parada.</p><small>06:52</small></div>
+                <div class="message sent"><p>Recebido! Aguardo na Praça Central.</p><small>06:53</small></div>
+                <div class="message received"><strong>Bruno</strong><p>Saindo agora da Avenida Principal.</p><small>06:58</small></div>
+            </div>
+            <form class="chat-compose" id="formChatRota"><input id="mensagemRota" type="text" placeholder="Mensagem para os passageiros" aria-label="Mensagem" required><button class="btn-primary" type="submit">Enviar</button></form>
+        </section>
+    </main>
+    <script>
+        const form = document.querySelector("#formChatRota");
+        const input = document.querySelector("#mensagemRota");
+        const mensagens = document.querySelector("#mensagensRota");
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+            const texto = input.value.trim();
+            if (!texto) return;
+            const hora = new Date().toLocaleTimeString("pt-BR", {hour:"2-digit", minute:"2-digit"});
+            mensagens.insertAdjacentHTML("beforeend", `<div class="message sent"><p>${texto.replace(/[<>]/g, "")}</p><small>${hora}</small></div>`);
+            input.value = "";
+            mensagens.scrollTop = mensagens.scrollHeight;
+        });
+    </script>
+</body>
+</html>

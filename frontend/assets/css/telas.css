@@ -273,6 +273,53 @@
     text-align: center;
 }
 
+.passenger-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 12px 14px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    background: #fff;
+    cursor: pointer;
+}
+
+.passenger-row span { display: flex; flex-direction: column; gap: 3px; }
+.passenger-row input { width: 20px; height: 20px; accent-color: #16803c; }
+
+.chat-card {
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .06);
+}
+
+.chat-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.chat-header div { display: flex; flex-direction: column; }
+.chat-header small { color: #64748b; margin-top: 2px; }
+.chat-avatar { width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; font-weight: 800; }
+.chat-messages { height: 360px; overflow-y: auto; display: flex; flex-direction: column; gap: 10px; padding: 16px; background: #f8fafc; }
+.message { max-width: 75%; padding: 10px 12px; border-radius: 8px; background: #fff; border: 1px solid #e2e8f0; }
+.message strong { display: block; margin-bottom: 4px; color: #1d72b8; font-size: .78rem; }
+.message p { margin-bottom: 3px; }
+.message small { display: block; color: #94a3b8; text-align: right; }
+.message.sent { align-self: flex-end; background: #e8f1ff; border-color: #bfdbfe; }
+.chat-compose { display: flex; gap: 10px; padding: 12px; border-top: 1px solid #e2e8f0; }
+.chat-compose input { flex: 1; min-width: 0; border: 1px solid #cbd5e1; border-radius: 5px; padding: 10px 12px; }
+
+.emergency-notice { display: flex; flex-direction: column; gap: 5px; padding: 16px; border: 1px solid #fecaca; border-left: 5px solid #dc2626; border-radius: 8px; background: #fff1f2; color: #991b1b; }
+.emergency-notice span { color: #b91c1c; font-size: .86rem; }
+.btn-danger { border: 0; border-radius: 5px; padding: 10px 16px; color: #fff; background: #dc2626; font-weight: 700; cursor: pointer; }
+
 @media (max-width: 650px) {
     .form-grid,
     .dashboard-grid,
@@ -286,8 +333,11 @@
 
     .filter-row,
     .data-row,
-    .form-actions {
+    .form-actions,
+    .chat-compose {
         align-items: stretch;
         flex-direction: column;
     }
+
+    .message { max-width: 88%; }
 }

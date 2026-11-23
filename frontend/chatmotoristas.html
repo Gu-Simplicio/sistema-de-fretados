@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat com Motoristas</title>
+    <link rel="stylesheet" href="assets/css/default.css">
+    <link rel="stylesheet" href="assets/css/telas.css">
+</head>
+<body class="page-body">
+    <nav class="nav"><div class="nav-title"><a href="index.html" aria-label="Voltar">←</a><h2>Chat com Motoristas</h2></div></nav>
+    <main class="container">
+        <section class="chat-card">
+            <header class="chat-header"><span class="chat-avatar card-purple">M</span><div><strong>Motoristas da empresa</strong><small>3 motoristas disponíveis</small></div></header>
+            <div class="chat-messages" id="mensagens">
+                <div class="message received"><strong>Ricardo</strong><p>Trânsito intenso na Avenida Central.</p><small>07:10</small></div>
+                <div class="message sent"><p>Vou seguir pela rua lateral.</p><small>07:12</small></div>
+                <div class="message received"><strong>Paulo</strong><p>Recebido. Boa viagem!</p><small>07:13</small></div>
+            </div>
+            <form class="chat-compose" id="formChat"><input id="mensagem" type="text" placeholder="Digite uma mensagem" aria-label="Mensagem" required><button class="btn-primary" type="submit">Enviar</button></form>
+        </section>
+    </main>
+    <script>
+        const form = document.querySelector("#formChat");
+        const input = document.querySelector("#mensagem");
+        const mensagens = document.querySelector("#mensagens");
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+            const texto = input.value.trim();
+            if (!texto) return;
+            const hora = new Date().toLocaleTimeString("pt-BR", {hour:"2-digit", minute:"2-digit"});
+            mensagens.insertAdjacentHTML("beforeend", `<div class="message sent"><p>${texto.replace(/[<>]/g, "")}</p><small>${hora}</small></div>`);
+            input.value = "";
+            mensagens.scrollTop = mensagens.scrollHeight;
+        });
+    </script>
+</body>
+</html>

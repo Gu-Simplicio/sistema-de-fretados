@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket de Emergência</title>
+    <link rel="stylesheet" href="assets/css/default.css">
+    <link rel="stylesheet" href="assets/css/telas.css">
+</head>
+<body class="page-body">
+    <nav class="nav"><div class="nav-title"><a href="index.html" aria-label="Voltar">←</a><h2>Ticket de Emergência</h2></div></nav>
+    <main class="container">
+        <section class="emergency-notice"><strong>Em caso de risco imediato, ligue para os serviços de emergência.</strong><span>Use este canal para notificar a empresa sobre a ocorrência.</span></section>
+        <form class="form-card" id="ticketEmergencia">
+            <h3>Registrar ocorrência</h3>
+            <div class="form-grid">
+                <div class="campo"><label for="tipo">Tipo de emergência</label><select id="tipo" required><option value="">Selecione</option><option>Problema mecânico</option><option>Acidente ou colisão</option><option>Problema de saúde</option><option>Desvio da rota</option><option>Outro</option></select></div>
+                <div class="campo"><label for="local">Local aproximado</label><input id="local" type="text" placeholder="Ex.: Avenida Principal, nº 100" required></div>
+                <div class="campo full"><label for="descricao">Descrição da situação</label><textarea id="descricao" placeholder="Informe o que aconteceu e quantas pessoas estão envolvidas" required></textarea></div>
+                <div class="campo full"><label for="contato">Telefone para contato</label><input id="contato" type="tel" value="(11) 99999-9999" required></div>
+            </div>
+            <div class="form-actions"><button class="btn-secondary" type="reset">Limpar</button><button class="btn-danger" type="submit">ENVIAR EMERGÊNCIA</button></div>
+        </form>
+    </main>
+    <script>
+        document.querySelector("#ticketEmergencia").addEventListener("submit", function (event) {
+            event.preventDefault();
+            alert("Ticket enviado à empresa. A equipe foi avisada.");
+            this.reset();
+        });
+    </script>
+</body>
+</html>
